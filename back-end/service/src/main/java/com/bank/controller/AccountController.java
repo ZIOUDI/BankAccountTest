@@ -25,8 +25,10 @@ public class AccountController  {
 	@GetMapping("/accounts/{idClient}")
 	public ResponseEntity<Account> getAccountByClientId(
 			@PathVariable(name="idClient") String idClient){
+		System.out.println("****************************    @GetMapping   **********************************");
 
 		Account account = bankDomainServiceAdapter.readAccount(idClient);
+		System.out.println(account);
 		return new ResponseEntity<Account>(account, HttpStatus.OK);
 	}
     

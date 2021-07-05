@@ -20,7 +20,8 @@ public class ClientBankDomainServiceAdapter implements ClientBankDomain {
 
 	@Override
 	public Account readAccount(String code) {
- 		return accountJpaRepository.findAccountByClientId(code);
+		System.out.println("service : "+ accountJpaRepository.findAccount(code));
+ 		return accountJpaRepository.findAccount(code);
 	}
 
 	@Override

@@ -12,8 +12,8 @@ import com.bank.persistence.entity.AccountEntity;
 public interface AccountJpaRepository extends  JpaRepository<AccountEntity, String>  {
 	
 	
-	@Query(value="select distinct a.* from account a where a.owner_id = ?clientId", nativeQuery=true)
-	AccountEntity findAccountByClientId(@Param("clientId") String code);
+	@Query(value="select  * from account   where account.owner_id = :clientId", nativeQuery=true)
+	AccountEntity findAccount(@Param("clientId") String code);
 	
 	@Query(value = "update account a  set a.balance = (a.balance+ :depot) where a.owner_id = :clientId",nativeQuery = true)
 	AccountEntity makeDepotInAccount(@Param("clientId") String code, @Param("depot") double plus);
