@@ -3,9 +3,11 @@ package com.bank.model;
 public class Account {
 
     private final String code;
-
     private double balance = 0;
 
+    
+    
+    
     public Account(String code) {
         this.code = code;
     }

@@ -2,11 +2,17 @@ package com.bank.persistence.entity;
 
 import javax.persistence.*;
 
+import com.bank.model.Account;
+
 @Entity
 @Table(name = "ACCOUNT")
-public class AccountEntity {
+public class AccountEntity extends Account {
 
-    @Id
+    public AccountEntity(String code) {
+		super(code);
+ 	}
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 

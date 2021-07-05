@@ -1,4 +1,15 @@
 package com.bank.spi;
 
-public interface AccountRepository {
+import java.sql.ResultSet;
+
+import com.bank.model.Account;
+
+public interface AccountRepository extends H2_ConnexionRepo {
+	
+	
+    // Account makeDepotInAccount();
+
+    
+    // Account makeWithDrawFromAccount();
+
 }

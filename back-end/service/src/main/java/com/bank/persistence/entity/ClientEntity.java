@@ -1,6 +1,9 @@
 package com.bank.persistence.entity;
 
 import javax.persistence.*;
+
+import com.bank.model.Client;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +11,8 @@ import java.util.List;
 @Table(name = "CLIENT")
 public class ClientEntity {
 
-    @Id
+     
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
